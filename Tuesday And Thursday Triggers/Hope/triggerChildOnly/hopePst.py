@@ -59,8 +59,8 @@ def trigger_webhook(payload: dict, community_id: str) -> None:
 
 
 def main() -> None:
-    # Start time: May 12, 2026 at 5:30 AM Pacific (local Mac time)
-    target = datetime(2026, 5, 12, 5, 30, 0)
+    # Start time: May 14, 2026 at 5:30 AM Pacific (local Mac time)
+    target = datetime(2026, 5, 14, 5, 30, 0)
     now = datetime.now()
     if now < target:
         sleep_seconds = (target - now).total_seconds()

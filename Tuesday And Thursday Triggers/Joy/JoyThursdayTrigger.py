@@ -47,8 +47,8 @@ def trigger_webhook(payload: dict, index: int) -> None:
     resp.raise_for_status()
 
 def main():
-    # Start time: May 7, 2026 at 5:00 AM Pacific (local Mac time)
-    target = datetime(2026, 5, 7, 5, 0, 0)
+    # Start time: May 14, 2026 at 5:00 AM Pacific (local Mac time)
+    target = datetime(2026, 5, 14, 5, 0, 0)
 
     now = datetime.now()
     if now < target:

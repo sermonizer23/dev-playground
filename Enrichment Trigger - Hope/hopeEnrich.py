@@ -9,25 +9,19 @@ DELAY_SECONDS = 15 * 60  # 15 minutes
 # Community IDs to dispatch for
 COMMUNITY_IDS = [
     "16478",
-    # "11364",
-    # "18953",
-    # "4736",
-    # "4725",
-    # "4770",
-    # "4746",
-    # "4728",
-    # "4753",
-    # "4772",
-    # "4729",
-    # "4715"
+    "11364",
+    "18953",
+    "4736",
+    "4725",
+    "4770",
+    "4746",
+    "4728",
+    "4753",
+    "4772",
+    "4729",
+    "4715"
 ]
 
-# Common config variables sent to the workflow
-# CONFIG_VARIABLES = {
-#     "maxProspects": 4,
-#     "digitalTouchNetScoreLt": 0,
-#     "includeScoreBreakdown": True,
-# }
 
 
 def trigger_webhook(payload: dict, community_id: str) -> None:
@@ -52,8 +46,8 @@ def trigger_webhook(payload: dict, community_id: str) -> None:
 
 
 def main() -> None:
-    # Start time: May 5, 2026 at 7:00 AM Pacific (local Mac time)
-    target = datetime(2026, 5, 5, 7, 0, 0)
+    # Start time: May 14, 2026 at 2:00 AM Pacific (local Mac time)
+    target = datetime(2026, 5, 14, 2, 0, 0)
 
     now = datetime.now()
     if now < target:
@@ -72,7 +66,6 @@ def main() -> None:
             "communityIds": [community_id],
             "limit":9999,
             "dryRun": False,
-            # "configVariables": CONFIG_VARIABLES,
         }
 
         try:
