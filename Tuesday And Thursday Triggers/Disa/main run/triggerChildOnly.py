@@ -8,8 +8,13 @@ DELAY_SECONDS = 15 * 60  # 15 minutes
 # Community IDs to dispatch for
 COMMUNITY_IDS = [
     "24",
-    "25", "27", 
-    "31", "34","63", "58","54"
+    "25",
+    "27", 
+    "31", 
+    "34",
+    "63", 
+    "58",
+    "54"
                    ]
 
 # Common config variables sent to the workflow
@@ -17,7 +22,7 @@ CONFIG_VARIABLES = {
     "netScoreThreshold": -1,
     "maxAccountsPerCounselor": 5,
     "lookaheadDays": 30,
-    "cooldownDays": 60,
+    "cooldownDays": 90,
     "dispatchSleepMinutes": 0.1,
     "allowedAccountRecordType": "Prospect",
     "salesforceBaseUrl": "https://acts.my.salesforce.com",
@@ -49,8 +54,8 @@ def trigger_webhook(payload: dict, community_id: str) -> None:
 
 
 def main() -> None:
-    # Start time: May 13, 2026 at 4:40 AM Pacific (local Mac time)
-    target = datetime(2026, 5, 13, 4, 40, 0)
+    # Start time: June 8, 2026 at 3:40 AM Pacific (local Mac time)
+    target = datetime(2026, 6, 8, 3, 40, 0)
 
     now = datetime.now()
     if now < target:

@@ -26,7 +26,7 @@ COMMUNITY_IDS = [
 # Common config variables sent to the workflow
 CONFIG_VARIABLES = {
     "netScoreThreshold": 0,
-    "maxProspectsPerCounselor": 2,
+    "maxProspectsPerCounselor": 4,
     "lookaheadDays": 30,
     "cooldownDays": 60,
     "dispatchSleepMinutes": 0.1,
@@ -58,8 +58,8 @@ def trigger_webhook(payload: dict, community_id: str) -> None:
 
 
 def main() -> None:
-    # Start time: May 13, 2026 at 5:30 AM Pacific (local Mac time)
-    target = datetime(2026, 5, 13, 5, 30, 0)
+    # Start time: june 3, 2026 at 5:30 AM Pacific (local Mac time)
+    target = datetime(2026, 6, 3, 5, 30, 0)
 
     now = datetime.now()
     if now < target:

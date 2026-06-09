@@ -9,8 +9,9 @@ DELAY_SECONDS = 7 * 60  # 7 minutes
 COMMUNITY_IDS = [
     "24", "25", "27", 
     "31", "34",
-                   "63"
-                   , "58","54"
+                   "63",
+                   "58",
+                   "54"
                    ]
 
 # Common config variables sent to the workflow
@@ -18,7 +19,7 @@ CONFIG_VARIABLES = {
     "netScoreThreshold": -1,
     "maxAccountsPerCounselor": 10,
     "lookaheadDays": 30,
-    "cooldownDays": 60,
+    "cooldownDays": 90,
     "dispatchSleepMinutes": 0.1,
     "allowedAccountRecordType": "Prospect",
     "salesforceBaseUrl": "https://acts.my.salesforce.com",

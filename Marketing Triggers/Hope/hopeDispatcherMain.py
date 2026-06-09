@@ -52,8 +52,8 @@ def trigger_webhook(payload: dict, community_id: str) -> None:
 
 
 def main() -> None:
-    # Start time: May 14, 2026 at 7:00 AM Pacific (local Mac time)
-    target = datetime(2026, 5, 14, 7, 0, 0)
+    # Start time: June 4, 2026 at 7:00 AM Pacific (local Mac time)
+    target = datetime(2026, 6, 4, 7, 0, 0)
 
     now = datetime.now()
     if now < target:

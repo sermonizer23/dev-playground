@@ -7,13 +7,13 @@ DELAY_SECONDS = .5 * 60  # 30 seconds
 
 # Community IDs to dispatch for
 COMMUNITY_IDS = [
-    # "24",
-    # "25",
+    "24",
+    "25",
      "27",
-    #  "31", 
-                #  "34",
-                #    "63", "58",
-                #    "54"
+     "31", 
+                 "34",
+                   "63", "58",
+                   "54"
                    ]
 
 # Common config variables sent to the workflow

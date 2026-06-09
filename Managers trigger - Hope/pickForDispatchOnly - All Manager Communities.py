@@ -3,43 +3,22 @@ import requests
 from datetime import datetime
 
 WEBHOOK_URL = "https://gs.budy.bot/external/services/consultant/webhook/v2/run/hwhrn/0be8bb51a9914c9ca3d5bd23ad15eaf5"
-DELAY_SECONDS = 1 * 60  # 1 minute
+DELAY_SECONDS = 7 * 60  # 7 minutes
 
 # Community IDs to dispatch for
 COMMUNITY_IDS = [
-    "4729",
-    # "4736",
-    # "4725","4770","4728","4753","4772","11364","16478","18953","4746","4715",
     # "4707",
-    # "4758",
-    # "11363",
-    # "4713",
-    # "4711",
-    # "4750",
-    # "4737",
-    # "4717",
-    # "4731",
-    # "4724",
-    # "4742",
-    # "4701",
-    # "4730",
-    # "4745",
-    "4763",
-    # "4755",
-    # "4733",
-    # "4697",
-    # "4748",
-    "4734",
-    # "4739",
-    # "4751",
-    # "4716",
-    # "4714",
-    # "4754",
-    # "4744",
-    # "4718",
-    # "4703",
-    # "4762",
-    # "4757",
+    "16478",
+    "4757",
+    "18953",
+    "4729",
+    "4750",
+    "4733",
+    "4756",  # The Savoy
+    "16412", # Bear Hollow Estates
+    "4766", # Stoneridge
+    "4722", # Hessler Heights
+    "4712", # CottonWood Estates
 ]
 
 # Common config variables sent to the workflow
@@ -47,7 +26,7 @@ CONFIG_VARIABLES = {
     "netScoreThreshold": 0,
     "maxProspectsPerCounselor": 5,
     "lookaheadDays": 30,
-    "cooldownDays": 60,
+    "cooldownDays": 90,
     "dispatchSleepMinutes": 0.1,
     "crmBaseUrl" : "https://crm.welcomehomesoftware.com/",
     "mailKind": "MAILGUN",
@@ -95,9 +74,9 @@ def main() -> None:
     for idx, community_id in enumerate(COMMUNITY_IDS, start=1):
         payload = {
             "communityId": community_id,
-            "dryRun": True,
+            "dryRun": False,
             "pickBasedOnTaggingTrue": True,
-            "mode":"triggerChildOnly",
+            "mode":"pickForDispatchOnly",
             "configVariables": CONFIG_VARIABLES,
         }
 

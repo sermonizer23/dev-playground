@@ -8,10 +8,10 @@ DELAY_SECONDS = 15 * 60  # 15 minutes
 
 # Community IDs to dispatch for
 COMMUNITY_IDS = [
+    "4736",
     "16478",
     "11364",
     "18953",
-    "4736",
     "4725",
     "4770",
     "4746",
@@ -21,8 +21,6 @@ COMMUNITY_IDS = [
     "4729",
     "4715"
 ]
-
-
 
 def trigger_webhook(payload: dict, community_id: str) -> None:
     headers = {
@@ -46,8 +44,8 @@ def trigger_webhook(payload: dict, community_id: str) -> None:
 
 
 def main() -> None:
-    # Start time: May 14, 2026 at 2:00 AM Pacific (local Mac time)
-    target = datetime(2026, 5, 14, 2, 0, 0)
+    # Start time: June 8, 2026 at 2:00 AM Pacific (local Mac time)
+    target = datetime(2026, 6, 8, 2, 0, 0)
 
     now = datetime.now()
     if now < target:

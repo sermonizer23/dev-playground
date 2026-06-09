@@ -11,12 +11,13 @@ WITHIN_BATCH_SPACING_SECONDS = 120  # 2 minutes between triggers in the same bat
 COMMUNITY_IDS = [
     "4729",
     "4736",
-    "4725","4770","4728",
-    # "4753",
+    "4725","4770",
+    # "4728",
+    "4753",
     # "4772",
     "11364",
     "4707",
-    "4758",
+    # "4758",
     # "11363",
     "4713",
     # "4711",
@@ -31,7 +32,7 @@ COMMUNITY_IDS = [
     # "4745",
     "4763",
     # "4755",
-    "4733",
+    # "4733",
     # "4697",
     "4748",
     "4734",
@@ -73,8 +74,8 @@ def trigger_webhook(payload: dict, community_id: str) -> None:
 
 
 def main() -> None:
-    # Start time: May 14, 2026 at 3:30 AM Pacific (local Mac time)
-    target = datetime(2026, 5, 14, 3, 30, 0)
+    # Start time: June 4, 2026 at 3:30 AM Pacific (local Mac time)
+    target = datetime(2026, 6, 4, 3, 30, 0)
 
     now = datetime.now()
     if now < target:

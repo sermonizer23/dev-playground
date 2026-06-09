@@ -14,14 +14,19 @@ COMMUNITY_IDS = [
     "4746",
     # "4715",
     "4751",
-    "4716",
+    # "4716",
     "4714",
-    "4754",
-    "4744",
+    # "4754",
+    # "4744",
     "4718",
-    "4703",
+    # "4703",
     "4762",
-    "4757",
+    # "4757",
+    "4768",
+    "4741",
+    "4756",
+    "4727",
+    "17699",
 ]
 
 # Common config variables sent to the workflow
@@ -59,8 +64,8 @@ def trigger_webhook(payload: dict, community_id: str) -> None:
 
 
 def main() -> None:
-    # Start time: May 14, 2026 at 5:30 AM Pacific (local Mac time)
-    target = datetime(2026, 5, 14, 5, 30, 0)
+    # Start time: June 4, 2026 at 5:30 AM Pacific (local Mac time)
+    target = datetime(2026, 6, 4, 5, 30, 0)
     now = datetime.now()
     if now < target:
         sleep_seconds = (target - now).total_seconds()
